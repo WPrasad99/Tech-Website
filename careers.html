@@ -411,37 +411,37 @@
                         </p>
                     </div>
 
-                    <form class="space-y-6">
+                    <form action="https://formspree.io/f/xyknokwb" method="POST" class="space-y-6">
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label class="form-label">Full Name</label>
-                                <input type="text" placeholder="John Doe" class="form-input">
+                                <input type="text" name="name" placeholder="John Doe" required class="form-input">
                             </div>
                             <div>
                                 <label class="form-label">Email Address</label>
-                                <input type="email" placeholder="john@example.com" class="form-input">
+                                <input type="email" name="email" placeholder="john@example.com" required class="form-input">
                             </div>
                         </div>
 
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label class="form-label">College / University</label>
-                                <input type="text" placeholder="Your University Name" class="form-input">
+                                <input type="text" name="college" placeholder="Your University Name" required class="form-input">
                             </div>
                             <div>
                                 <label class="form-label">Branch / Major</label>
-                                <input type="text" placeholder="Computer Science, etc." class="form-input">
+                                <input type="text" name="branch" placeholder="Computer Science, etc." required class="form-input">
                             </div>
                         </div>
 
                         <div class="grid md:grid-cols-2 gap-6">
                             <div>
                                 <label class="form-label">Passout Year</label>
-                                <input type="number" placeholder="2025" class="form-input">
+                                <input type="number" name="passout_year" placeholder="2025" required class="form-input">
                             </div>
                             <div>
                                 <label class="form-label">Applying For</label>
-                                <input type="text" id="applied-position" readonly
+                                <input type="text" name="position" id="applied-position" readonly
                                     class="form-input bg-slate-50 text-slate-500 cursor-not-allowed">
                             </div>
                         </div>
