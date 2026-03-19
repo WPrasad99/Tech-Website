@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="icon" type="image/png" href="logo.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="logo.png" />
+    <link rel="shortcut icon" href="logo.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+
+    <title>About Us - KLN Business Solutions</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Lucide icons for clean, modern symbols -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Load Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Load AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Fixed Header Capsule Style */
+        .header-capsule {
+            position: fixed;
+            top: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 100;
+            max-width: 68rem;
+            width: 90%;
+            background-color: #111827;
+            border-radius: 3rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease-in-out;
+            padding: 0.4rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Hero Banner Styles */
+        .about-hero {
+            position: relative;
+            background: url('pexels-a-darmel-7710090.jpg') center center / cover no-repeat;
+            padding: 8rem 0 4rem;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 15, 26, 0.7);
+            z-index: 1;
+        }
+
+        .about-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Specific Layouts */
+        .mission-line-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: -40px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .mission-circle {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            border: 6px solid white;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            margin-right: -80px;
+            position: relative;
+        }
+
+        .mission-circle:nth-child(1) {
+            z-index: 3;
+        }
+
+        .mission-circle:nth-child(2) {
+            z-index: 2;
+        }
+
+        .mission-circle:nth-child(3) {
+            z-index: 1;
+        }
+
+        /* Section Headings Style (Impact-like) */
+        .impact-heading {
+            font-family: Impact, 'Arial Black', sans-serif;
+            font-size: clamp(3rem, 10vw, 7rem);
+            line-height: 1.0;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            transform: scaleY(1.1);
+            transform-origin: left top;
+            margin-bottom: 2rem;
+        }
+
+        /* Image Masking / Shapes */
+        .circle-container {
+            border-radius: 50%;
+            overflow: hidden;
+            aspect-ratio: 1 / 1;
+            width: 100%;
+            height: 100%;
+            display: block;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .oval-mask {
+            border-radius: 50% / 35%;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- FIXED CONTACT BUTTONS STYLES --- */
+        .fixed-contact-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-btn {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            transform: scale(1);
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .call-btn {
+            background-color: #3b82f6;
+            color: white;
+        }
+
+        .oval-mask {
+            border-radius: 50% / 35%;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .vision-cluster {
+            position: relative;
+            height: 550px;
+            width: 100%;
+        }
+
+        .vision-img-1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 45%;
+            z-index: 1;
+        }
+
+        .vision-img-2 {
+            position: absolute;
+            bottom: 0;
+            left: 5%;
+            width: 45%;
+            height: 45%;
+            z-index: 2;
+        }
+
+        .vision-img-3 {
+            position: absolute;
+            top: 25%;
+            right: 0;
+            width: 55%;
+            height: 50%;
+            z-index: 3;
+        }
+
+        .circle-image {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 8px solid white;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .circle-1 {
+            top: 0;
+            right: 0;
+            z-index: 3;
+        }
+
+        .circle-2 {
+            top: 20px;
+            right: 140px;
+            z-index: 2;
+        }
+
+        .circle-3 {
+            top: 40px;
+            right: 280px;
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .impact-heading {
+                font-size: 3rem;
+                transform: none;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            .circle-container {
+                width: 250px;
+                height: 250px;
+                border-width: 4px;
+                margin: 0 auto 2rem;
+            }
+
+            .mission-line-container {
+                flex-direction: row;
+                justify-content: center;
+                gap: -15px;
+                padding-left: 0;
+                margin-top: 1rem;
+            }
+
+            .mission-circle {
+                width: 140px;
+                height: 140px;
+                border-width: 3px;
+                margin-right: -40px;
+            }
+
+            .vision-cluster {
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .vision-img-1,
+            .vision-img-2,
+            .vision-img-3 {
+                position: relative;
+                width: 160px;
+                height: 160px;
+                top: auto;
+                left: auto;
+                right: auto;
+                bottom: auto;
+                border: 4px solid white;
+                box-shadow: none;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .oval-mask {
+                border-radius: 50%;
+            }
+        }
+
+        /* Partners Section */
+        .partner-logo {
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.3s ease;
+        }
+
+        .partner-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="header-capsule">
+        <div class="max-w-7xl mx-auto px-4 lg:px-6">
+            <div class="flex justify-between items-center h-14">
+                <!-- Logo/Branding --><a href="index.html#hero" class="flex items-center space-x-3 py-1">
+                    <img src="logo.png" alt="KLN Logo"
+                        class="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-contain border-2 border-emerald-400/50 bg-white">
+                    <div class="flex flex-col justify-center">
+                        <span
+                            class="text-base sm:text-lg lg:text-xl font-medium bg-gradient-to-r from-emerald-400 to-cyan-400 text-transparent bg-clip-text tracking-tight leading-none mb-1 drop-shadow-sm whitespace-nowrap"
+                            style="font-family: 'Plus Jakarta Sans', sans-serif;">KLN BUSINESS</span>
+                        <span
+                            class="text-[0.6rem] sm:text-[0.65rem] lg:text-[0.7rem] font-medium text-white/80 tracking-[0.25em] leading-none ml-0.5">SOLUTIONS</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center space-x-4 lg:space-x-8">
+                    <a href="index.html#hero"
+                        class="text-sm lg:text-base font-medium text-gray-300 hover:text-white transition duration-200 py-2">Home</a>
+                    <a href="about-us.html"
+                        class="text-sm lg:text-base font-medium text-emerald-400 transition duration-200 py-2">About
+                        Us</a>
+                    <div class="relative group">
+                        <a href="index.html#services"
+                            class="text-sm lg:text-base font-medium text-gray-300 hover:text-white transition duration-200 py-2 inline-flex items-center gap-1">Services
+                            <i data-lucide="chevron-down"
+                                class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180"></i>
+                        </a>
+                        <div
+                            class="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div
+                                class="bg-[#1e293b] border border-white/10 rounded-xl shadow-2xl p-2 min-w-[200px] backdrop-blur-xl">
+                                <a href="index.html#services"
+                                    class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-150 tracking-wide text-left">Web
+                                    Development</a>
+                                <a href="index.html#services"
+                                    class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-150 tracking-wide text-left">Mobile
+                                    App Solutions</a>
+                                <a href="index.html#services"
+                                    class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-150 tracking-wide text-left">UX/UI
+                                    Design</a>
+                                <a href="index.html#services"
+                                    class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-150 tracking-wide text-left">SEO
+                                    & Marketing</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html#why-us"
+                        class="text-sm lg:text-base font-medium text-gray-300 hover:text-white transition duration-200 py-2">Why
+                        Us</a>
+                    <a href="index.html#team"
+                        class="text-sm lg:text-base font-medium text-gray-300 hover:text-white transition duration-200 py-2">Team</a>
+                    <a href="careers.html"
+                        class="text-sm lg:text-base font-medium text-gray-300 hover:text-white transition duration-200 py-2">Careers</a>
+                </nav>
+
+                <a href="index.html#contact"
+                    class="hidden md:inline-flex items-center justify-center px-4 py-2 border border-white/20 text-sm font-medium rounded-full shadow-md text-white bg-white/10 hover:bg-white/20 transition duration-150 transform hover:scale-105">Contact
+                    Us</a>
+
+                <button id="mobile-menu-btn"
+                    class="md:hidden text-gray-300 hover:text-blue-500 p-2 rounded-lg transition duration-150">
+                    <i id="menu-icon" data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <nav
+                class="flex flex-col space-y-2 p-4 mt-2 text-white bg-slate-800/95 backdrop-blur-md rounded-2xl shadow-2xl border border-slate-700">
+                <a href="index.html#hero"
+                    class="block py-3 px-4 text-base font-semibold rounded-xl hover:bg-slate-700/70">Home</a>
+                <a href="about-us.html"
+                    class="block py-3 px-4 text-base font-semibold text-emerald-400 rounded-xl bg-slate-700/50">About
+                    Us</a>
+                <a href="index.html#services"
+                    class="block py-3 px-4 text-base font-semibold rounded-xl hover:bg-slate-700/70">Services</a>
+                <a href="index.html#team"
+                    class="block py-3 px-4 text-base font-semibold rounded-xl hover:bg-slate-700/70">Team</a>
+                <a href="index.html#why-us"
+                    class="block py-3 px-4 text-base font-semibold rounded-xl hover:bg-slate-700/70">Why Us</a>
+                <a href="careers.html"
+                    class="block py-3 px-4 text-base font-semibold rounded-xl hover:bg-slate-700/70">Careers</a>
+                <a href="index.html#contact"
+                    class="block py-3 px-4 text-base font-bold text-slate-900 bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-xl text-center shadow-lg mt-3">Contact
+                    Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Us Hero Banner -->
+    <section class="about-hero">
+        <div class="about-hero-content max-w-7xl mx-auto px-6 lg:px-12">
+            <nav class="flex justify-center items-center space-x-2 text-xs font-bold tracking-widest uppercase text-emerald-400 mb-6"
+                data-aos="fade-down">
+                <a href="index.html" class="hover:text-white transition-colors">HOME</a>
+                <span class="text-white/40">/</span>
+                <span class="text-white">ABOUT US</span>
+            </nav>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter leading-none"
+                data-aos="zoom-in" data-aos-delay="200">
+                OUR <br class="sm:hidden"> JOURNEY
+            </h1>
+        </div>
+    </section>
+
+    <main>
+        <!-- OUR DIRECTOR SECTION -->
+        <section class="py-24 bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                    <!-- Text Content -->
+                    <div class="lg:w-1/2 text-center lg:text-left" data-aos="fade-right">
+                        <h2 class="impact-heading">OUR<span class="block pt-2">DIRECTOR</span></h2>
+                        <h3 class="text-xl font-extrabold text-[#111827] mb-6">Mrs. Deepali Navin Kumar</h3>
+                        <div class="space-y-6 text-[#4b5563] text-lg leading-relaxed">
+                            <p>
+                                At KLN Business Solutions, our vision is guided by a commitment to excellence and
+                                innovation. Our leadership team focuses on bridging the gap between complex technology
+                                and intuitive user experiences, ensuring every project delivers measurable growth for
+                                our clients.
+                            </p>
+                            <p>
+                                We believe in building robust digital ecosystems that empower businesses to scale
+                                globally. By prioritizing engineering excellence and creative problem-solving, we've
+                                established ourselves as a premier technology partner for modern enterprises.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Image Content -->
+                    <div class="lg:w-1/2" data-aos="fade-left">
+                        <div class="max-w-[480px] mx-auto">
+                            <div class="circle-container">
+                                <img src="director.png" alt="Mrs. Deepali Navin Jadhav"
+                                    class="w-full h-full object-cover object-top">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR MISSION SECTION -->
+        <section class="py-24 bg-[#fafafa]">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="flex flex-col lg:flex-row justify-between mb-12">
+                    <div class="lg:w-1/2 text-center lg:text-left" data-aos="fade-right">
+                        <h2 class="impact-heading">OUR<span class="block pt-2">MISSION</span></h2>
+                    </div>
+                    <!-- Mission Line Images -->
+                    <div class="lg:w-1/2 mb-12 lg:mb-0" data-aos="fade-left">
+                        <div class="mission-line-container">
+                            <div class="mission-circle">
+                                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=500&q=80"
+                                    alt="Mission 1" class="w-full h-full object-cover">
+                            </div>
+                            <div class="mission-circle">
+                                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500&q=80"
+                                    alt="Mission 2" class="w-full h-full object-cover">
+                            </div>
+                            <div class="mission-circle">
+                                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=500&q=80"
+                                    alt="Mission 3" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mission Points Grid -->
+                <div class="grid md:grid-cols-3 gap-8 lg:gap-12 text-center lg:text-left" data-aos="fade-up">
+                    <div>
+                        <h4 class="text-2xl font-black text-[#111827] mb-4">Mission 01</h4>
+                        <p class="text-[#6b7280] leading-relaxed mx-auto lg:mx-0 max-w-lg">
+                            To deliver top-tier custom software solutions that enable businesses to streamline
+                            operations and enhance user engagement. We strive for engineering perfection in every line
+                            of code we write and every interface we design.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-black text-[#111827] mb-4">Mission 02</h4>
+                        <p class="text-[#6b7280] leading-relaxed mx-auto lg:mx-0 max-w-lg">
+                            To foster a culture of continuous innovation and transparency. Our goal is to be the most
+                            trusted technology partner for startups and enterprises, delivering real business value
+                            through agile development and creative strategy.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-black text-[#111827] mb-4">Mission 03</h4>
+                        <p class="text-[#6b7280] leading-relaxed mx-auto lg:mx-0 max-w-lg">
+                            To prioritize continuous learning and knowledge sharing within our team and community,
+                            ensuring our solutions always leverage the latest technological advancements to future-proof
+                            our clients' businesses.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR VISION SECTION -->
+        <section class="py-24 bg-white overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="flex flex-col lg:flex-row gap-16 lg:gap-24">
+                    <!-- Vision Image Cluster (Left) -->
+                    <div class="lg:w-1/2" data-aos="fade-right">
+                        <div class="vision-cluster">
+                            <!-- Top Left Vertical Oval -->
+                            <div class="vision-img-1 oval-mask border-8 border-white shadow-xl">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80"
+                                    alt="Vision 1" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Bottom Left Vertical Oval -->
+                            <div class="vision-img-2 oval-mask border-8 border-white shadow-xl">
+                                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80"
+                                    alt="Vision 2" class="w-full h-full object-cover">
+                            </div>
+                            <!-- Middle Right Circle -->
+                            <div
+                                class="vision-img-3 rounded-full overflow-hidden border-[12px] border-white shadow-2xl">
+                                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=600&q=80"
+                                    alt="Vision 3" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vision Text (Center Aligned) -->
+                    <div class="lg:w-1/2 text-center self-center" data-aos="fade-left">
+                        <h2 class="impact-heading text-center">OUR<span class="block pt-2">VISION</span></h2>
+                        <div class="space-y-8 mt-12">
+                            <div>
+                                <h4 class="text-2xl font-black text-[#111827] mb-3">Vision 01</h4>
+                                <p class="text-[#6b7280] leading-relaxed mx-auto max-w-lg">
+                                    To become a global leader in digital transformation, recognized for our ability to
+                                    solve complex business challenges with elegant, scalable technology.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-black text-[#111827] mb-3">Vision 02</h4>
+                                <p class="text-[#6b7280] leading-relaxed mx-auto max-w-lg">
+                                    To empower the next generation of digital-first companies with the tools and
+                                    interfaces they need to dominate their respective markets.
+                                </p>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-black text-[#111827] mb-3">Vision 03</h4>
+                                <p class="text-[#6b7280] leading-relaxed mx-auto max-w-lg">
+                                    To cultivate an ecosystem where technology acts as a seamless extension of human
+                                    potential, driving sustainable and inclusive growth for enterprises worldwide.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR PARTNERS SECTION -->
+        <section class="py-24 bg-[#fafafa] border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 text-center">
+                <h2 class="text-3xl font-black text-[#111827] mb-4">OUR PARTNERS</h2>
+                <p class="text-emerald-500 font-bold uppercase tracking-widest text-sm mb-12">Reliable Partnership Since
+                    2024</p>
+
+                <div class="flex flex-wrap justify-center items-center gap-12 lg:gap-24">
+                    <!-- Partner 1 -->
+                    <a href="https://rikarena.org/" target="_blank" class="flex flex-col items-center group"
+                        data-aos="fade-up">
+                        <div
+                            class="w-auto min-w-[240px] h-28 flex items-center justify-center px-8 py-4 bg-white rounded-2xl shadow-sm border border-gray-100 partner-logo">
+                            <img src="rikarena_logo.png" alt="RikArena" class="h-16 w-auto object-contain">
+                        </div>
+                        <p class="mt-4 text-sm font-black text-slate-700">RikArena</p>
+                        <p class="text-xs font-medium text-gray-400 group-hover:text-blue-500 transition-colors">
+                            Technology Partner</p>
+                    </a>
+
+                    <!-- Partner 2 -->
+                    <a href="https://www.systeratech.com/" target="_blank" class="flex flex-col items-center group"
+                        data-aos="fade-up" data-aos-delay="100">
+                        <div
+                            class="w-auto min-w-[240px] h-28 flex items-center justify-center px-8 py-4 bg-white rounded-2xl shadow-sm border border-gray-100 partner-logo">
+                            <img src="systera_logo.png" alt="SysTeraTech" class="h-14 w-auto object-contain">
+                        </div>
+                        <p class="mt-4 text-sm font-black text-slate-700">SysTeraTech</p>
+                        <p class="text-xs font-medium text-gray-400 group-hover:text-emerald-500 transition-colors">
+                            Software Solutions Partner</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Fixed Contact Buttons -->
+    <div class="fixed-contact-buttons">
+        <a href="https://wa.me/1234567890?text=Hello%20NexGen%20Solutions%2C%20I%20saw%20your%20website%20and%20would%20like%20to%20inquire%20about%20a%20new%20project."
+            target="_blank" class="contact-btn whatsapp-btn" aria-label="Chat with us on WhatsApp">
+            <i data-lucide="message-square" class="w-7 h-7"></i>
+        </a>
+        <a href="tel:+1-555-123-4567" class="contact-btn call-btn" aria-label="Call NexGen Solutions">
+            <i data-lucide="phone" class="w-7 h-7"></i>
+        </a>
+    </div>
+
+    <!-- Footer - Light Gray Standard Footer -->
+    <footer class="bg-gray-100 text-gray-700 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+
+                <!-- Brand Info -->
+                <div class="col-span-2 md:col-span-1">
+                    <a href="index.html#hero" class="flex items-center space-x-2 mb-4">
+                        <span class="text-xl font-extrabold text-gray-900">KLN BUSINESS</span>
+                        <span class="text-xl font-light text-emerald-500">SOLUTIONS</span>
+                    </a>
+                    <p class="text-sm text-gray-500 max-w-sm mb-6">
+                        Driving digital transformation with bespoke software solutions. Partner with us to modernize
+                        your digital presence and scale your startup globally.
+                    </p>
+                </div>
+
+                <!-- Company -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-900">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about-us.html" class="hover:text-emerald-500 transition-colors">About Us</a></li>
+                        <li><a href="index.html#team" class="text-gray-600 hover:text-blue-600 transition">Our Team</a>
+                        </li>
+                        <li><a href="careers.html" class="text-gray-600 hover:text-blue-600 transition">Careers</a>
+                        </li>
+                        <li><a href="index.html#why-us" class="text-gray-600 hover:text-blue-600 transition">Why Us</a>
+                        </li>
+                        <li><a href="index.html#contact"
+                                class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-900">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html#services" class="text-gray-600 hover:text-blue-600 transition">Web
+                                Development</a></li>
+                        <li><a href="index.html#services" class="text-gray-600 hover:text-blue-600 transition">Mobile
+                                Apps</a>
+                        </li>
+                        <li><a href="index.html#services" class="text-gray-600 hover:text-blue-600 transition">Cloud</a>
+                        </li>
+                        <li><a href="index.html#services" class="text-gray-600 hover:text-blue-600 transition">UX/UI
+                                Design</a></li>
+                        <li><a href="index.html#services" class="text-gray-600 hover:text-blue-600 transition">SEO &
+                                Marketing
+                            </a></li>
+                    </ul>
+                </div>
+
+                <!-- Connect -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-gray-900">Connect</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html#contact" class="text-gray-600 hover:text-blue-600 transition">Contact
+                                Sales</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition">Support</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition">Terms of Service</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 pt-8 border-t border-gray-300 text-center">
+                <div class="flex justify-center space-x-6 mb-4">
+                    <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i data-lucide="linkedin"
+                            class="w-5 h-5"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i data-lucide="twitter"
+                            class="w-5 h-5"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i data-lucide="github"
+                            class="w-5 h-5"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i data-lucide="instagram"
+                            class="w-5 h-5"></i></a>
+                </div>
+                <p class="text-sm text-gray-500">
+                    &copy; 2026 KLN Business Solutions. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({ duration: 1000, once: true, offset: 100 });
+        // Initialize Lucide
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const isHidden = mobileMenu.classList.contains('hidden');
+            menuIcon.setAttribute('data-lucide', isHidden ? 'menu' : 'x');
+            lucide.createIcons();
+        });
+    </script>
+</body>
+
+</html>
