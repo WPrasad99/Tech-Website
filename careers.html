@@ -170,25 +170,156 @@
             color: #64748b;
             margin-bottom: 0.5rem;
         }
+
+        /* Career Hero Banner Styles */
+        .career-hero {
+            position: relative;
+            background: url('pexels-a-darmel-7710090.jpg') center center / cover no-repeat;
+            padding: 8rem 0 4rem;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .career-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 15, 26, 0.7);
+            z-index: 1;
+        }
+
+        .career-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Testimonials Marquee Styling (Synced with index.html) */
+        .testimonials-marquee-container {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            padding: 2rem 0;
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .testimonials-marquee {
+            display: flex;
+            gap: 1.5rem;
+            width: max-content;
+            animation: scrollMarquee 30s linear infinite;
+        }
+
+        .testimonials-marquee:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scrollMarquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-50% - 0.75rem));
+            }
+        }
+
+        .testimonial-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 1.25rem;
+            padding: 1.75rem;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            position: relative;
+            width: 380px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center top;
+            flex-shrink: 0;
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 2px;
+        }
+
+        .testimonial-stars svg {
+            width: 16px;
+            height: 16px;
+            fill: #f59e0b;
+            color: #f59e0b;
+        }
+
+        /* --- FIXED CONTACT BUTTONS STYLES (NEW) --- */
+        .fixed-contact-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-btn {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            transform: scale(1);
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .call-btn {
+            background-color: #3b82f6;
+            color: white;
+        }
     </style>
 </head>
 
 <body class="antialiased">
 
     <!-- Header & Navigation -->
+    <!-- Header & Navigation -->
     <header class="header-capsule">
         <div class="max-w-7xl mx-auto px-4 lg:px-6">
             <div class="flex justify-between items-center h-14">
-                <!-- Logo/Branding -->
-                <a href="index.html" class="flex items-center space-x-3 py-1">
+                <!-- Logo/Branding --><a href="index.html#hero" class="flex items-center space-x-3 py-1">
+                    <!-- Circular Logo Image -->
                     <img src="logo.png" alt="KLN Logo"
                         class="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-contain border-2 border-emerald-400/50 bg-white">
                     <div class="flex flex-col justify-center">
                         <span
-                            class="text-base sm:text-lg lg:text-xl font-medium bg-gradient-to-r from-emerald-400 to-cyan-400 text-transparent bg-clip-text tracking-tight leading-none mb-1 drop-shadow-sm"
-                            style="font-family: 'Plus Jakarta Sans', sans-serif;">KLN Business</span>
+                            class="text-base sm:text-lg lg:text-xl font-medium bg-gradient-to-r from-emerald-400 to-cyan-400 text-transparent bg-clip-text tracking-tight leading-none mb-1 drop-shadow-sm whitespace-nowrap"
+                            style="font-family: 'Plus Jakarta Sans', sans-serif;">KLN BUSINESS</span>
                         <span
-                            class="text-[0.6rem] sm:text-[0.65rem] lg:text-[0.7rem] font-medium text-white/80 tracking-[0.25em] leading-none ml-0.5">Solutions</span>
+                            class="text-[0.6rem] sm:text-[0.65rem] lg:text-[0.7rem] font-medium text-white/80 tracking-[0.25em] leading-none ml-0.5">SOLUTIONS</span>
                     </div>
                 </a>
 
@@ -199,33 +330,60 @@
                     <a href="index.html#about-us"
                         class="text-sm lg:text-base font-medium text-gray-300 hover:text-white transition duration-200 py-2">About
                         Us</a>
+                    <div class="relative group">
+                        <a href="index.html#services"
+                            class="text-sm lg:text-base font-medium text-gray-300 hover:text-white transition duration-200 py-2 inline-flex items-center gap-1">Services
+                            <i data-lucide="chevron-down"
+                                class="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180"></i>
+                        </a>
+                        <!-- Dropdown -->
+                        <div
+                            class="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                            <div
+                                class="bg-[#1e293b] border border-white/10 rounded-xl shadow-2xl p-2 min-w-[200px] backdrop-blur-xl">
+                                <a href="index.html#services"
+                                    class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-150 tracking-wide text-left">
+                                    Web Development
+                                </a>
+                                <a href="index.html#services"
+                                    class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-150 tracking-wide text-left">
+                                    Mobile App Solutions
+                                </a>
+                                <a href="index.html#services"
+                                    class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-150 tracking-wide text-left">
+                                    UX/UI Design
+                                </a>
+                                <a href="index.html#services"
+                                    class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-150 tracking-wide text-left">
+                                    SEO & Marketing
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                     <a href="index.html#why-us"
                         class="text-sm lg:text-base font-medium text-gray-300 hover:text-white transition duration-200 py-2">Why
                         Us</a>
-                    <a href="index.html#services"
-                        class="text-sm lg:text-base font-medium text-gray-300 hover:text-white transition duration-200 py-2">Services</a>
                     <a href="index.html#team"
                         class="text-sm lg:text-base font-medium text-gray-300 hover:text-white transition duration-200 py-2">Team</a>
-                    <a href="#"
+                    <a href="careers.html"
                         class="text-sm lg:text-base font-medium text-emerald-400 transition duration-200 py-2">Careers</a>
                 </nav>
 
-                <!-- CTA Button -->
-                <a href="index.html#contact"
+                <!-- CTA Button --><a href="index.html#contact"
                     class="hidden md:inline-flex items-center justify-center px-4 py-2 border border-white/20 text-sm font-medium rounded-full shadow-md text-white bg-white/10 hover:bg-white/20 transition duration-150 transform hover:scale-105">
                     Contact Us
                 </a>
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn"
+                <!-- Mobile Menu Button --><button id="mobile-menu-btn"
                     class="md:hidden text-gray-300 hover:text-blue-500 p-2 rounded-lg transition duration-150"
                     aria-label="Toggle Menu">
-                    <i id="menu-icon" data-lucide="menu" class="w-6 h-6"></i>
+                    <!-- Icon placeholder for dynamic change --><i id="menu-icon" data-lucide="menu"
+                        class="w-6 h-6"></i>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Menu -->
+        <!-- Mobile Menu (Hidden by Default) -->
         <div id="mobile-menu" class="hidden md:hidden">
             <nav
                 class="flex flex-col space-y-2 p-4 mt-2 text-white bg-slate-800/95 backdrop-blur-md rounded-2xl shadow-2xl border border-slate-700">
@@ -238,16 +396,35 @@
                     class="block py-3 px-4 text-base font-semibold rounded-xl hover:bg-slate-700/70 transition-colors">Services</a>
                 <a href="index.html#team"
                     class="block py-3 px-4 text-base font-semibold rounded-xl hover:bg-slate-700/70 transition-colors">Team</a>
-                <a href="#"
+                <a href="index.html#why-us"
+                    class="block py-3 px-4 text-base font-semibold rounded-xl hover:bg-slate-700/70 transition-colors">Why
+                    Us</a>
+                <a href="careers.html"
                     class="block py-3 px-4 text-base font-semibold text-emerald-400 rounded-xl bg-slate-700/50 transition-colors">Careers</a>
+
                 <a href="index.html#contact"
                     class="block py-3 px-4 text-base font-bold text-slate-900 bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-xl text-center shadow-lg hover:shadow-emerald-500/25 transition-all mt-3">Contact
                     Us</a>
             </nav>
         </div>
     </header>
+    <!-- Career Hero Banner -->
+    <section class="career-hero">
+        <div class="career-hero-content max-w-7xl mx-auto px-6 lg:px-12">
+            <nav class="flex justify-center items-center space-x-2 text-xs font-bold tracking-widest uppercase text-emerald-400 mb-6"
+                data-aos="fade-down">
+                <a href="index.html" class="hover:text-white transition-colors">HOME</a>
+                <span class="text-white/40">/</span>
+                <span class="text-white">CAREER</span>
+            </nav>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-black text-white uppercase tracking-tighter leading-none"
+                data-aos="zoom-in" data-aos-delay="200">
+                JOIN OUR <br class="sm:hidden"> FAMILY
+            </h1>
+        </div>
+    </section>
 
-    <main class="pt-44 pb-20"> <!-- Increased pt-32 to pt-44 for more space below navbar -->
+    <main class="pt-20 pb-20">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="flex flex-col lg:flex-row gap-16 lg:gap-24">
 
@@ -417,7 +594,7 @@
             </div>
 
             <!-- Application Form Section -->
-            <section id="application-form" class="mt-16 pt-12 border-t border-slate-100" data-aos="fade-up">
+            <section id="application-form" class="mt-16 pt-12 border-t border-slate-100 hidden" data-aos="fade-up">
                 <div class="max-w-3xl mx-auto">
                     <div class="text-center mb-12">
                         <h2 class="text-4xl font-bold text-[#1e293b] mb-4">Apply for Position</h2>
@@ -472,6 +649,263 @@
                     </form>
                 </div>
             </section>
+
+            <!-- Intern Testimonials Section -->
+            <section class="mt-24 pb-12 overflow-hidden" data-aos="fade-up">
+                <div class="text-center mb-16">
+                    <span class="text-sm font-semibold text-emerald-600 uppercase tracking-[0.2em]">Our Interns</span>
+                    <h2 class="mt-3 text-4xl font-extrabold text-gray-900 leading-tight">
+                        What Our Interns Say
+                    </h2>
+                    <p class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">
+                        Experience the vibrant culture and learning journey at KLN through the eyes of our interns.
+                    </p>
+                </div>
+
+                <!-- Marquee Container -->
+                <div class="testimonials-marquee-container">
+                    <div class="testimonials-marquee">
+                        <!-- Group 1 -->
+                        <!-- Intern 1 -->
+                        <div class="testimonial-card">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&h=400&q=80"
+                                        alt="Ankit Verma" class="testimonial-avatar">
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 text-sm">Ankit Verma</h4>
+                                        <p class="text-xs text-gray-500">Full-Stack Development Intern</p>
+                                    </div>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed italic">
+                                "The hands-on experience at KLN was mind-blowing. I got to work on real-world projects
+                                that actually matter and received guidance from top-tier mentors."
+                            </p>
+                        </div>
+
+                        <!-- Intern 2 -->
+                        <div class="testimonial-card">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=400&q=80"
+                                        alt="Sneha Patel" class="testimonial-avatar">
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 text-sm">Sneha Patel</h4>
+                                        <p class="text-xs text-gray-500">UI/UX Design Intern</p>
+                                    </div>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed italic">
+                                "Designing for KLN was an incredible journey. The team's focus on minimalism and
+                                user-centricity taught me how to create products that are both beautiful and
+                                functional."
+                            </p>
+                        </div>
+
+                        <!-- Intern 3 -->
+                        <div class="testimonial-card">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&h=400&q=80"
+                                        alt="Vikram Singh" class="testimonial-avatar">
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 text-sm">Vikram Singh</h4>
+                                        <p class="text-xs text-gray-500">Digital Marketing Intern</p>
+                                    </div>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed italic">
+                                "Marketing at KLN is fast-paced and creative. I loved the freedom to experiment with new
+                                campaign ideas and see real-time impact on brand growth."
+                            </p>
+                        </div>
+
+                        <!-- Duplicate for Seamless Loop -->
+                        <div class="testimonial-card">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&h=400&q=80"
+                                        alt="Ankit Verma" class="testimonial-avatar">
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 text-sm">Ankit Verma</h4>
+                                        <p class="text-xs text-gray-500">Full-Stack Development Intern</p>
+                                    </div>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed italic">
+                                "The hands-on experience at KLN was mind-blowing. I got to work on real-world projects
+                                that actually matter and received guidance from top-tier mentors."
+                            </p>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&h=400&q=80"
+                                        alt="Sneha Patel" class="testimonial-avatar">
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 text-sm">Sneha Patel</h4>
+                                        <p class="text-xs text-gray-500">UI/UX Design Intern</p>
+                                    </div>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed italic">
+                                "Designing for KLN was an incredible journey. The team's focus on minimalism and
+                                user-centricity taught me how to create products that are both beautiful and
+                                functional."
+                            </p>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&h=400&q=80"
+                                        alt="Vikram Singh" class="testimonial-avatar">
+                                    <div>
+                                        <h4 class="font-bold text-gray-900 text-sm">Vikram Singh</h4>
+                                        <p class="text-xs text-gray-500">Digital Marketing Intern</p>
+                                    </div>
+                                </div>
+                                <div class="testimonial-stars">
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                    <svg viewBox="0 0 20 20">
+                                        <path
+                                            d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="text-sm text-gray-600 leading-relaxed italic">
+                                "Marketing at KLN is fast-paced and creative. I loved the freedom to experiment with new
+                                campaign ideas and see real-time impact on brand growth."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 
@@ -487,7 +921,8 @@
                         <span class="text-xl font-light text-emerald-500">SOLUTIONS</span>
                     </a>
                     <p class="text-sm text-gray-500 max-w-sm mb-6">
-                        Driving digital transformation with bespoke software solutions.
+                        Driving digital transformation with bespoke software solutions. Partner with us to modernize
+                        your digital presence and scale your startup globally.
                     </p>
                 </div>
 
@@ -500,7 +935,10 @@
                         <li><a href="index.html#team" class="text-gray-600 hover:text-blue-600 transition">Our Team</a>
                         </li>
                         <li><a href="#" class="text-teal-600 font-medium transition cursor-default">Careers</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-blue-600 transition">Blog</a></li>
+                        <li><a href="index.html#why-us" class="text-gray-600 hover:text-blue-600 transition">Why Us</a>
+                        </li>
+                        <li><a href="index.html#contact" class="text-gray-600 hover:text-blue-600 transition">Contact</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -516,6 +954,8 @@
                         </li>
                         <li><a href="index.html#services" class="text-gray-600 hover:text-blue-600 transition">UX/UI
                                 Design</a></li>
+                        <li><a href="index.html#services" class="text-gray-600 hover:text-blue-600 transition">SEO &
+                                Marketing</a></li>
                     </ul>
                 </div>
 
@@ -544,11 +984,21 @@
                             class="w-5 h-5"></i></a>
                 </div>
                 <p class="text-sm text-gray-500">
-                    &copy; 2025 KLN Business Solutions. All rights reserved.
+                    &copy; 2026 KLN Business Solutions. All rights reserved.
                 </p>
             </div>
         </div>
     </footer>
+
+    <!-- Fixed Contact Buttons (Synced with index.html) -->
+    <div class="fixed-contact-buttons">
+        <a href="https://wa.me/1234567890" target="_blank" class="contact-btn whatsapp-btn" aria-label="WhatsApp">
+            <i data-lucide="message-square" class="w-7 h-7"></i>
+        </a>
+        <a href="tel:+1-555-123-4567" class="contact-btn call-btn" aria-label="Call">
+            <i data-lucide="phone" class="w-7 h-7"></i>
+        </a>
+    </div>
 
     <!-- Load AOS Animation script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -583,17 +1033,23 @@
             const formSection = document.getElementById('application-form');
             const positionInput = document.getElementById('applied-position');
 
+            // Show the form
+            formSection.classList.remove('hidden');
+
             // Set input value
             positionInput.value = roleName;
 
-            // Smooth scroll
-            formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-            // Highlight the form briefly
-            formSection.classList.add('bg-blue-50/30');
+            // Wait a brief moment for the display change to take effect before scrolling
             setTimeout(() => {
-                formSection.classList.remove('bg-blue-50/30');
-            }, 1000);
+                // Smooth scroll
+                formSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                // Highlight the form briefly
+                formSection.classList.add('bg-blue-50/30');
+                setTimeout(() => {
+                    formSection.classList.remove('bg-blue-50/30');
+                }, 1000);
+            }, 50);
         }
 
         // Mobile Menu Toggle Logic
