@@ -5,22 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KLN Business Solutions | Premium Custom Software & Web Development</title>
-    <meta name="description" content="KLN Business Solutions offers top-class software, web development, mobile apps, and enterprise digital transformation services to scale your business globally.">
+    <meta name="description"
+        content="KLN Business Solutions offers top-class software, web development, mobile apps, and enterprise digital transformation services to scale your business globally.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.klnbs.com/">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.klnbs.com/">
     <meta property="og:title" content="KLN Business Solutions | Premium Custom Software & Web Development">
-    <meta property="og:description" content="KLN Business Solutions offers top-class software, web development, mobile apps, and enterprise digital transformation services to scale your business globally.">
+    <meta property="og:description"
+        content="KLN Business Solutions offers top-class software, web development, mobile apps, and enterprise digital transformation services to scale your business globally.">
     <meta property="og:image" content="https://www.klnbs.com/logo.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.klnbs.com/">
     <meta property="twitter:title" content="KLN Business Solutions | Premium Custom Software & Web Development">
-    <meta property="twitter:description" content="KLN Business Solutions offers top-class software, web development, mobile apps, and enterprise digital transformation services to scale your business globally.">
+    <meta property="twitter:description"
+        content="KLN Business Solutions offers top-class software, web development, mobile apps, and enterprise digital transformation services to scale your business globally.">
     <meta property="twitter:image" content="https://www.klnbs.com/logo.png">
 
     <!-- Favicon -->
@@ -1076,11 +1079,17 @@
 
                         .accordion-card-overlay {
                             position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            right: 0;
-                            padding: 2rem 1.5rem;
-                            background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%);
+                            bottom: 1.5rem;
+                            left: 1.5rem;
+                            width: max-content;
+                            max-width: calc(100% - 3rem);
+                            padding: 1.2rem 1.5rem 1.2rem 1.2rem;
+                            text-align: left;
+                            background: rgba(255, 255, 255, 0.95);
+                            backdrop-filter: blur(12px);
+                            -webkit-backdrop-filter: blur(12px);
+                            border-radius: 1.25rem;
+                            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
                             opacity: 0;
                             transform: translateY(20px);
                             transition: opacity 0.4s ease 0.15s, transform 0.4s ease 0.15s;
@@ -1092,32 +1101,39 @@
                         }
 
                         .accordion-card-overlay h3 {
-                            font-size: 1.75rem;
+                            font-size: 1.15rem;
                             font-weight: 800;
-                            color: #fff;
-                            margin-bottom: 0.25rem;
+                            color: #111827;
+                            margin-bottom: 0.15rem;
                             white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                         }
 
                         .accordion-card-overlay p {
-                            font-size: 0.95rem;
-                            font-weight: 400;
-                            color: rgba(255, 255, 255, 0.85);
+                            font-size: 0.65rem;
+                            font-weight: 800;
+                            color: #10b981;
+                            text-transform: uppercase;
+                            letter-spacing: 0.05em;
+                            margin-bottom: 0.65rem;
                             white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
                         }
 
                         .accordion-card-overlay .social-link {
                             display: inline-flex;
                             align-items: center;
                             gap: 0.35rem;
-                            margin-top: 0.75rem;
-                            color: rgba(255, 255, 255, 0.7);
-                            font-size: 0.85rem;
+                            color: #64748b;
+                            font-weight: 700;
+                            font-size: 0.75rem;
                             transition: color 0.2s ease;
                         }
 
                         .accordion-card-overlay .social-link:hover {
-                            color: #fff;
+                            color: #0077b5; /* LinkedIn Color */
                         }
 
                         /* Card number indicator (idle state) */
@@ -1140,35 +1156,48 @@
                             opacity: 0;
                         }
 
-                        /* Mobile: Stack vertically */
+                        /* Mobile: Stack vertically - No Hover Expand required */
                         @media (max-width: 768px) {
                             .accordion-container {
                                 flex-direction: column;
                                 height: auto;
-                                gap: 0.75rem;
+                                gap: 1rem;
                             }
 
-                            .accordion-card {
-                                height: 200px;
+                            .accordion-card, .accordion-card:hover {
+                                height: 280px;
                                 flex: none;
                                 border-radius: 1.5rem;
                             }
 
-                            .accordion-card:hover {
-                                flex: none;
-                                height: 350px;
-                            }
-
                             .accordion-card-number {
-                                writing-mode: horizontal-tb;
-                                bottom: auto;
-                                top: 1rem;
-                                left: 1.25rem;
-                                transform: none;
+                                display: none; /* Hide numbers on mobile since they are unneeded */
                             }
 
-                            .accordion-card-overlay {
-                                padding: 1.5rem 1.25rem;
+                            .accordion-card .accordion-card-overlay {
+                                opacity: 1;
+                                transform: translateY(0);
+                                padding: 0.5rem 0.8rem 0.5rem 0.6rem;
+                                bottom: 0.5rem;
+                                left: 0.5rem;
+                                border-radius: 0.75rem;
+                                max-width: calc(100% - 1rem);
+                            }
+
+                            .accordion-card .accordion-card-overlay h3 {
+                                font-size: 0.85rem;
+                                margin-bottom: 0;
+                                line-height: 1.2;
+                            }
+
+                            .accordion-card .accordion-card-overlay p {
+                                font-size: 0.55rem;
+                                margin-bottom: 0.2rem;
+                                line-height: 1.2;
+                            }
+
+                            .accordion-card .accordion-card-overlay .social-link {
+                                font-size: 0.6rem;
                             }
                         }
                     </style>
@@ -1178,49 +1207,49 @@
 
                         <!-- Card 1: Alex Chen -->
                         <div class="accordion-card" style="background-color: #B0D4D8;">
-                            <img src="gds-photo-30kb.jpg" alt="Alex Chen">
+                            <img src="prasad.png" alt="Prasad Wadkar - Project Manager">
                             <div class="accordion-card-overlay">
                                 <h3>Prasad Wadkar</h3>
-                                <p>Senior Project Manaager</p>
-                                <a href="https://www.linkedin.com/in/prasadwadkarr/?skipRedirect=true"
+                                <p>Project Manager</p>
+                                <a href="https://www.linkedin.com/in/prasadwadkarr/?skipRedirect=true" target="_blank"
                                     class="social-link">
-                                    <i data-lucide="linkedin" class="w-4 h-4"></i> Connect
+                                    <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
                                 </a>
                             </div>
                         </div>
 
-                        <!-- Card 2: Sarah Miller -->
+                        <!-- Card 2: Hrishikesh -->
                         <div class="accordion-card" style="background-color: #5E7D9A;">
-                            <img src="team member2.jpg" alt="Sarah Miller">
+                            <img src="hrishikesh.png" alt="Hrishikesh Vanjari - Marketing Intern">
                             <div class="accordion-card-overlay">
-                                <h3>Hrishikeesh Vanjari</h3>
-                                <p>Head of Product Design</p>
-                                <a href="#" class="social-link">
-                                    <i data-lucide="dribbble" class="w-4 h-4"></i> Portfolio
+                                <h3>Hrishikesh Vanjari</h3>
+                                <p>Marketing Intern</p>
+                                <a href="https://www.linkedin.com/in/hrishikesh-vanjari-3599b1276/" target="_blank" class="social-link">
+                                    <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
                                 </a>
                             </div>
                         </div>
 
                         <!-- Card 3: David Lee -->
                         <div class="accordion-card" style="background-color: #9D70C4;">
-                            <img src="team member 3.jpg" alt="David Lee">
+                            <img src="team member 3.jpg" alt="David Lee - VP of Engineering">
                             <div class="accordion-card-overlay">
                                 <h3>David Lee</h3>
                                 <p>VP of Engineering</p>
                                 <a href="#" class="social-link">
-                                    <i data-lucide="github" class="w-4 h-4"></i> GitHub
+                                    <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
                                 </a>
                             </div>
                         </div>
 
                         <!-- Card 4: Emily Ross -->
                         <div class="accordion-card" style="background-color: #F9E6D1;">
-                            <img src="team member 4.jpg" alt="Emily Ross">
+                            <img src="team member 4.jpg" alt="Emily Ross - Director of Growth">
                             <div class="accordion-card-overlay">
                                 <h3>Emily Ross</h3>
                                 <p>Director of Growth Marketing</p>
                                 <a href="#" class="social-link">
-                                    <i data-lucide="mail" class="w-4 h-4"></i> Email
+                                    <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
                                 </a>
                             </div>
                         </div>
@@ -1609,8 +1638,14 @@
                             Driving digital transformation with bespoke software solutions. Partner with us to modernize
                             your digital presence and scale your startup globally.
                         </p>
-                        <a href="mailto:enquiry.klnbs@gmail.com" class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-600 rounded-full text-sm font-semibold hover:bg-emerald-100 transition-colors border border-emerald-100 shadow-sm mt-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                        <a href="mailto:enquiry.klnbs@gmail.com"
+                            class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-600 rounded-full text-sm font-semibold hover:bg-emerald-100 transition-colors border border-emerald-100 shadow-sm mt-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-mail">
+                                <rect width="20" height="16" x="2" y="4" rx="2" />
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                            </svg>
                             enquiry.klnbs@gmail.com
                         </a>
                     </div>
