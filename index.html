@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -554,7 +554,7 @@
             height: 44px;
             border-radius: 50%;
             object-fit: cover;
-            object-position: center top;
+            object-position: center;
             flex-shrink: 0;
             background-color: #e2e8f0;
         }
@@ -641,22 +641,30 @@
                                 class="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                                 <div
                                     class="bg-[#1e293b] border border-white/10 rounded-xl shadow-2xl p-2 min-w-[200px] backdrop-blur-xl">
-                                    <a href="#services"
-                                        class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-150 tracking-wide text-left">
-                                        Web Development
-                                    </a>
-                                    <a href="#services"
-                                        class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-150 tracking-wide text-left">
-                                        Mobile App Solutions
-                                    </a>
-                                    <a href="#services"
-                                        class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-150 tracking-wide text-left">
-                                        UX/UI Design
-                                    </a>
-                                    <a href="#services"
-                                        class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-150 tracking-wide text-left">
-                                        SEO & Marketing
-                                    </a>
+                                <a href="#services"
+                                    class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-150 tracking-wide text-left">
+                                    Website Development
+                                </a>
+                                <a href="#services"
+                                    class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-150 tracking-wide text-left">
+                                    Mobile Applications Development
+                                </a>
+                                <a href="#services"
+                                    class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-150 tracking-wide text-left">
+                                    SEO Optimization
+                                </a>
+                                <a href="#services"
+                                    class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-150 tracking-wide text-left">
+                                    Deployment
+                                </a>
+                                <a href="#services"
+                                    class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-150 tracking-wide text-left">
+                                    Internship Training
+                                </a>
+                                <a href="#services"
+                                    class="block px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-150 tracking-wide text-left">
+                                    Courses
+                                </a>
                                 </div>
                             </div>
                         </div>
@@ -907,53 +915,106 @@
                         </p>
                     </div>
 
-                    <!-- Services Grid - 8 Cards -->
-                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Services Grid -->
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                        <!-- Card 1: Web Dev -->
-                        <div class="service-card p-6 rounded-2xl shadow-xl bg-white border border-gray-100">
-                            <div class="w-12 h-12 mb-4 p-2 rounded-xl bg-blue-100 flex items-center justify-center">
-                                <i data-lucide="code" class="w-7 h-7 text-blue-600"></i>
+                        <!-- Card 1: Website Development -->
+                        <div class="service-card p-8 rounded-3xl bg-white border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                            <div class="w-14 h-14 mb-6 rounded-full border border-gray-100 shadow-sm flex items-center justify-center bg-white">
+                                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="2" y="4" width="20" height="16" rx="2" fill="#eff6ff"/>
+                                    <rect x="2" y="4" width="20" height="16" rx="2" stroke="#3b82f6" stroke-width="1.5"/>
+                                    <path d="M2 9H22" stroke="#3b82f6" stroke-width="1.5"/>
+                                    <circle cx="5.5" cy="6.5" r="1" fill="#3b82f6"/>
+                                    <circle cx="8.5" cy="6.5" r="1" fill="#3b82f6"/>
+                                    <path d="M14 13L16 15L14 17" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10 13L8 15L10 17" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Web Development</h3>
-                            <p class="text-gray-600 text-sm">
-                                Custom, responsive, and high-performance websites built with modern frameworks like
-                                React and Vue.
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3 tracking-tight">Website Development</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">
+                                Customized development solutions that are visually stunning, user-friendly, and seamlessly functional.
                             </p>
                         </div>
 
-                        <!-- Card 2: Mobile Apps -->
-                        <div class="service-card p-6 rounded-2xl shadow-xl bg-white border border-gray-100">
-                            <div class="w-12 h-12 mb-4 p-2 rounded-xl bg-emerald-100 flex items-center justify-center">
-                                <i data-lucide="smartphone" class="w-7 h-7 text-emerald-600"></i>
+                        <!-- Card 2: Mobile Applications Development -->
+                        <div class="service-card p-8 rounded-3xl bg-white border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                            <div class="w-14 h-14 mb-6 rounded-full border border-gray-100 shadow-sm flex items-center justify-center bg-white">
+                                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="6" y="2" width="12" height="20" rx="3" fill="#ecfdf5"/>
+                                    <rect x="6" y="2" width="12" height="20" rx="3" stroke="#10b981" stroke-width="1.5"/>
+                                    <path d="M10 5H14" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"/>
+                                    <rect x="11.5" y="18" width="1" height="1" rx="0.5" stroke="#10b981" stroke-width="1.5"/>
+                                    <path d="M9 10H15M9 14H12" stroke="#10b981" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">Mobile App Solutions</h3>
-                            <p class="text-gray-600 text-sm">
-                                Native and cross-platform mobile applications for iOS and Android that drive engagement.
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3 tracking-tight">Mobile Applications Development</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">
+                                Native and cross-platform mobile apps for iOS and Android that drive engagement and business growth.
                             </p>
                         </div>
 
-                        <!-- Card 3: UX/UI Design -->
-                        <div class="service-card p-6 rounded-2xl shadow-xl bg-white border border-gray-100">
-                            <div class="w-12 h-12 mb-4 p-2 rounded-xl bg-yellow-100 flex items-center justify-center">
-                                <i data-lucide="brush" class="w-7 h-7 text-yellow-600"></i>
+                        <!-- Card 3: SEO Optimization -->
+                        <div class="service-card p-8 rounded-3xl bg-white border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                            <div class="w-14 h-14 mb-6 rounded-full border border-gray-100 shadow-sm flex items-center justify-center bg-white">
+                                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 21V19C3 18.4477 3.44772 18 4 18H8C8.55228 18 9 18.4477 9 19V21" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+                                    <path d="M15 21V9C15 8.44772 15.4477 8 16 8H20C20.5523 8 21 8.44772 21 9V21" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+                                    <path d="M9 21V14C9 13.4477 9.44772 13 10 13H14C14.5523 13 15 13.4477 15 14V21" fill="#fff7ed" stroke="#f97316" stroke-width="1.5"/>
+                                    <path d="M3 8L9.5 3L13.5 6L21 2" stroke="#f97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <circle cx="21" cy="2" r="1.5" fill="#f97316"/>
+                                </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">UX/UI Design</h3>
-                            <p class="text-gray-600 text-sm">
-                                Crafting intuitive, beautiful, and accessible user experiences that maximize conversions
-                                and satisfaction.
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3 tracking-tight">SEO Optimization</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">
+                                Implementing data-driven strategies to improve your visibility and maximize organic traffic growth.
                             </p>
                         </div>
 
-                        <!-- Card 7: SEO -->
-                        <div class="service-card p-6 rounded-2xl shadow-xl bg-white border border-gray-100">
-                            <div class="w-12 h-12 mb-4 p-2 rounded-xl bg-orange-100 flex items-center justify-center">
-                                <i data-lucide="trending-up" class="w-7 h-7 text-orange-600"></i>
+                        <!-- Card 4: Deployment -->
+                        <div class="service-card p-8 rounded-3xl bg-white border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                            <div class="w-14 h-14 mb-6 rounded-full border border-gray-100 shadow-sm flex items-center justify-center bg-white">
+                                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 3L4 7L12 11L20 7L12 3Z" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4 12L12 16L20 12" stroke="#8b5cf6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M4 17L12 21L20 17" stroke="#8b5cf6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 6.5V7.5" stroke="#8b5cf6" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
                             </div>
-                            <h3 class="text-xl font-bold text-gray-900 mb-2">SEO & Marketing</h3>
-                            <p class="text-gray-600 text-sm">
-                                Implementing data-driven strategies to improve your visibility and maximize organic
-                                traffic growth.
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3 tracking-tight">Deployment</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">
+                                Scalable, secure, and robust cloud infrastructure and deployment solutions tailored for your operations.
+                            </p>
+                        </div>
+
+                        <!-- Card 5: Internship Training -->
+                        <div class="service-card p-8 rounded-3xl bg-white border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                            <div class="w-14 h-14 mb-6 rounded-full border border-gray-100 shadow-sm flex items-center justify-center bg-white">
+                                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 4L2 9L12 14L22 9L12 4Z" fill="#f0fdfa" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M5 10.5V15.5C5 15.5 8 19 12 19C16 19 19 15.5 19 15.5V10.5" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M22 9V17" stroke="#14b8a6" stroke-width="1.5" stroke-linecap="round"/>
+                                    <circle cx="22" cy="18" r="1.5" fill="#14b8a6"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3 tracking-tight">Internship Training</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">
+                                We provide practical internship training specifically structured for diploma students to gain real industry experience.
+                            </p>
+                        </div>
+
+                        <!-- Card 6: Courses -->
+                        <div class="service-card p-8 rounded-3xl bg-white border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+                            <div class="w-14 h-14 mb-6 rounded-full border border-gray-100 shadow-sm flex items-center justify-center bg-white">
+                                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="4" y="4" width="16" height="16" rx="2" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M10 8L16 12L10 16V8Z" fill="#2563eb"/>
+                                    <path d="M4 12H10" stroke="#2563eb" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 mb-3 tracking-tight">Courses</h3>
+                            <p class="text-gray-500 text-sm leading-relaxed">
+                                Curated technical and professional courses designed by industry experts to upskill and accelerate your career.
                             </p>
                         </div>
 
@@ -1005,6 +1066,61 @@
                 </div>
             </section>
 
+            <!-- Careers Section -->
+            <section class="py-20 lg:py-28 bg-white overflow-hidden relative" id="careers-preview">
+                <!-- Decorative green gradients in background -->
+                <div class="absolute top-10 right-10 w-96 h-32 bg-gradient-to-r from-emerald-100/40 to-green-300/40 blur-3xl rounded-full pointer-events-none transform rotate-12"></div>
+                <div class="absolute bottom-20 left-1/2 w-80 h-40 bg-gradient-to-r from-emerald-50/50 to-green-300/30 blur-3xl rounded-full pointer-events-none transform -translate-x-1/2"></div>
+                
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="lg:flex lg:items-center lg:gap-16">
+                        
+                        <!-- Left Side: Text -->
+                        <div class="lg:w-5/12 mb-16 lg:mb-0">
+                            <h2 class="text-4xl sm:text-5xl lg:text-[3.25rem] font-bold text-[#2d3748] mb-6 tracking-tight leading-tight">
+                                Careers at KLN
+                            </h2>
+                            <p class="text-lg sm:text-xl text-gray-500 mb-10 leading-relaxed font-light pr-4">
+                                Welcome to KLN Business Solutions! We're so glad you're considering becoming a part of our family. Here at KLN, we're passionate about building a brilliant future with our cutting-edge tech and dedicated professionals.
+                            </p>
+                            <a href="careers.html" class="inline-flex items-center justify-center px-8 py-3.5 text-[0.95rem] font-semibold text-white bg-[#1a202c] hover:bg-black rounded-[0.85rem] transition duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                                See open positions
+                            </a>
+                        </div>
+                        
+                        <!-- Right Side: Masonry Image Collage -->
+                        <div class="lg:w-7/12 relative">
+                            <!-- Background gradient block specific to collage -->
+                            <div class="absolute top-[15%] right-[-5%] w-[80%] h-[30%] bg-gradient-to-r from-transparent via-emerald-200/50 to-green-400/40 blur-2xl rounded-full -z-10"></div>
+                            <div class="absolute bottom-[25%] left-[-15%] w-[60%] h-[40%] bg-gradient-to-r from-emerald-100/60 to-green-400/40 blur-2xl rounded-full -z-10"></div>
+
+                            <div class="grid grid-cols-12 gap-3 sm:gap-4 items-center">
+                                <!-- Top horizontal image (col 1-8) -->
+                                <div class="col-span-8 overflow-hidden rounded-2xl shadow-lg transform hover:-translate-y-1 transition duration-500 bg-gray-100">
+                                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Team collaborating" class="w-full h-32 sm:h-48 object-cover">
+                                </div>
+                                
+                                <!-- Tall vertical image (col 9-12, row 1-3) -->
+                                <div class="col-span-4 row-span-3 overflow-hidden rounded-[2rem] shadow-2xl transform sm:translate-y-6 hover:-translate-y-1 transition duration-500 bg-gray-100 border-4 border-white">
+                                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&h=1200&q=80" alt="Modern corporate building" class="w-full h-[280px] sm:h-[420px] object-cover">
+                                </div>
+                                
+                                <!-- Small square image (col 4-8) -->
+                                <div class="col-start-4 sm:col-start-5 col-span-5 sm:col-span-4 overflow-hidden rounded-2xl shadow-lg transform sm:-translate-y-2 hover:-translate-y-3 transition duration-500 bg-gray-100 border-4 border-white relative z-10">
+                                    <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=400&q=80" alt="Modern office" class="w-full h-24 sm:h-36 object-cover pointer-events-none">
+                                </div>
+                                
+                                <!-- Bottom horizontal image (col 1-8) -->
+                                <div class="col-span-8 overflow-hidden rounded-2xl shadow-lg transform sm:translate-y-2 hover:-translate-y-1 transition duration-500 bg-gray-100">
+                                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" alt="Colleagues talking" class="w-full h-32 sm:h-44 object-cover object-center pointer-events-none">
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
             <!-- Team Section - Image Accordion -->
             <section class="py-20 lg:py-28 bg-slate-50" id="team">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1033,7 +1149,7 @@
                             style="animation-delay: 0.5s;">
                             <a href="https://linkedin.com/company/nexgensolutions" target="_blank"
                                 class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-xl text-white bg-blue-600 hover:bg-blue-700 transition duration-200 shadow-md transform hover:shadow-lg">
-                                <i data-lucide="linkedin" class="w-5 h-5 mr-2"></i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                                 Follow Our Story
                             </a>
                         </div>
@@ -1216,7 +1332,7 @@
                                 <p>Project Manager</p>
                                 <a href="https://www.linkedin.com/in/prasadwadkarr/?skipRedirect=true" target="_blank"
                                     class="social-link">
-                                    <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn
                                 </a>
                             </div>
                         </div>
@@ -1229,7 +1345,7 @@
                                 <p>Marketing Head</p>
                                 <a href="https://www.linkedin.com/in/hrishikesh-vanjari-3599b1276/" target="_blank"
                                     class="social-link">
-                                    <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn
                                 </a>
                             </div>
                         </div>
@@ -1241,7 +1357,7 @@
                                 <h3>David Lee</h3>
                                 <p>VP of Engineering</p>
                                 <a href="#" class="social-link">
-                                    <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn
                                 </a>
                             </div>
                         </div>
@@ -1253,7 +1369,7 @@
                                 <h3>Emily Ross</h3>
                                 <p>Director of Growth Marketing</p>
                                 <a href="#" class="social-link">
-                                    <i data-lucide="linkedin" class="w-4 h-4"></i> LinkedIn
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn
                                 </a>
                             </div>
                         </div>
@@ -1548,17 +1664,17 @@
                         <!-- Left Side: Form -->
                         <div
                             class="bg-gray-50 p-8 rounded-3xl shadow-xl border border-gray-200 h-full flex flex-col justify-center">
-                            <form action="https://formspree.io/f/xyknokwb" method="POST" class="space-y-6">
+                            <form action="https://formspree.io/f/xzdkpknz" method="POST" class="space-y-6">
                                 <div class="grid sm:grid-cols-2 gap-6">
                                     <div>
                                         <label for="contact-name"
-                                            class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                            class="block text-sm font-medium text-gray-700 mb-1">Full Name <span class="text-red-500 text-lg leading-none">*</span></label>
                                         <input type="text" id="contact-name" name="name" required placeholder="John Doe"
                                             class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder-gray-400 transition-colors">
                                     </div>
                                     <div>
                                         <label for="contact-email"
-                                            class="block text-sm font-medium text-gray-700 mb-1">Work Email</label>
+                                            class="block text-sm font-medium text-gray-700 mb-1">Work Email <span class="text-red-500 text-lg leading-none">*</span></label>
                                         <input type="email" id="contact-email" name="email" required
                                             placeholder="john.doe@company.com"
                                             class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder-gray-400 transition-colors">
@@ -1567,7 +1683,7 @@
 
                                 <div>
                                     <label for="contact-subject"
-                                        class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                                        class="block text-sm font-medium text-gray-700 mb-1">Subject <span class="text-red-500 text-lg leading-none">*</span></label>
                                     <input type="text" id="contact-subject" name="subject" required
                                         placeholder="New Project Inquiry"
                                         class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder-gray-400 transition-colors">
@@ -1575,7 +1691,7 @@
 
                                 <div>
                                     <label for="contact-message"
-                                        class="block text-sm font-medium text-gray-700 mb-1">How Can We Help?</label>
+                                        class="block text-sm font-medium text-gray-700 mb-1">How Can We Help? <span class="text-red-500 text-lg leading-none">*</span></label>
                                     <textarea id="contact-message" name="message" rows="5" required
                                         placeholder="Describe your project, goals, and timeline..."
                                         class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-blue-500 focus:border-blue-500 text-gray-900 placeholder-gray-400 transition-colors"></textarea>
@@ -1591,18 +1707,26 @@
                             </form>
                         </div>
 
-                        <!-- Right Side: Dummy Map -->
-                        <div
-                            class="h-full min-h-[400px] rounded-3xl overflow-hidden shadow-xl border border-gray-200 relative group">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.6641846435344!2d73.8391388!3d18.4590521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI3JzMyLjYiTiA3M8KwNTAnMzAuMiJF!5e0!3m2!1sen!2sin!4v1710920000000!5m2!1sen!2sin"
-                                width="100%" height="100%" style="border:0; position: absolute; inset: 0;"
-                                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                            <div
-                                class="absolute inset-0 bg-blue-900/5 pointer-events-none transition-colors duration-500 group-hover:bg-transparent">
+                        <!-- Right Side: Interactive Map Link -->
+                        <a href="https://maps.google.com/?q=18.4590521,73.8391388" target="_blank"
+                            class="block h-full min-h-[400px] rounded-3xl overflow-hidden shadow-xl border border-gray-200 relative group cursor-pointer">
+                            
+                            <!-- Pointer events none prevents the iframe from stealing clicks, letting the anchor tag trigger -->
+                            <div class="pointer-events-none absolute inset-0 w-full h-full">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.6641846435344!2d73.8391388!3d18.4590521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI3JzMyLjYiTiA3M8KwNTAnMzAuMiJF!5e0!3m2!1sen!2sin!4v1710920000000!5m2!1sen!2sin"
+                                    width="100%" height="100%" style="border:0;"
+                                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
-                        </div>
+
+                            <!-- Overlay for visual feedback on hover -->
+                            <div
+                                class="absolute inset-0 bg-blue-900/10 transition-colors duration-500 group-hover:bg-blue-900/30 flex items-center justify-center">
+                                <span class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white text-blue-600 px-6 py-3 rounded-full font-bold shadow-xl transform translate-y-4 group-hover:translate-y-0 flex items-center gap-2">
+                                    <i data-lucide="map-pin" class="w-4 h-4"></i> Open in Maps
+                                </span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -1612,10 +1736,9 @@
 
         <!-- Fixed Contact Buttons (NEW) -->
         <div class="fixed-contact-buttons">
-            <!-- WhatsApp Button -->
-            <!-- Note: Replace '1234567890' with the actual phone number, including country code (no '+' or leading 00). -->
-            <a href="https://wa.me/1234567890?text=Hello%20NexGen%20Solutions%2C%20I%20saw%20your%20website%20and%20would%20like%20to%20inquire%20about%20a%20new%20project."
-                target="_blank" class="contact-btn whatsapp-btn" aria-label="Chat with us on WhatsApp">
+            <!-- Email Button (Message Icon) -->
+            <a href="mailto:klnbusinesssolutions@klnbs.in" target="_blank" class="contact-btn whatsapp-btn"
+                aria-label="Send us an email">
                 <i data-lucide="message-square" class="w-7 h-7"></i>
             </a>
 
@@ -1642,7 +1765,7 @@
                             Driving digital transformation with bespoke software solutions. Partner with us to modernize
                             your digital presence and scale your startup globally.
                         </p>
-                        <a href="mailto:enquiry.klnbs@gmail.com"
+                        <a href="mailto:klnbusinesssolutions@klnbs.in"
                             class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-600 rounded-full text-sm font-semibold hover:bg-emerald-100 transition-colors border border-emerald-100 shadow-sm mt-2">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -1650,7 +1773,7 @@
                                 <rect width="20" height="16" x="2" y="4" rx="2" />
                                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                             </svg>
-                            enquiry.klnbs@gmail.com
+                            klnbusinesssolutions@klnbs.in
                         </a>
                     </div>
 
@@ -1704,15 +1827,11 @@
 
                 <div class="mt-12 pt-8 border-t border-gray-300 text-center">
                     <div class="flex justify-center space-x-6 mb-4">
-                        <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i data-lucide="linkedin"
-                                class="w-5 h-5"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i data-lucide="twitter"
-                                class="w-5 h-5"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i data-lucide="github"
-                                class="w-5 h-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-600 transition"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-600 transition"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-600 transition"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
                         <!-- Instagram Icon -->
-                        <a href="#" class="text-gray-400 hover:text-blue-600 transition"><i data-lucide="instagram"
-                                class="w-5 h-5"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-600 transition"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a>
                     </div>
                     <p class="text-sm text-gray-500">
                         &copy; 2024 KLN Business Solutions. All rights reserved.
