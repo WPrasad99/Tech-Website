@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>KLN Business Solutions | Premium Custom Software & Web Development</title>
     <meta name="description"
         content="KLN Business Solutions offers top-class software, web development, mobile apps, and enterprise digital transformation services to scale your business globally.">
@@ -48,6 +48,13 @@
         /* ADDED: Smooth scroll for anchors */
         html {
             scroll-behavior: smooth;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+            position: relative;
         }
 
         body {
@@ -577,7 +584,18 @@
         }
 
         /* --- END TESTIMONIALS SECTION STYLES --- */
-    </style>
+    
+        /* Critical Mobile Responsiveness & Overflow Fixes */
+        html, body {
+            overflow-x: hidden !important;
+            width: 100vw !important;
+            max-width: 100% !important;
+            position: relative;
+        }
+        * {
+            box-sizing: border-box;
+        }
+</style>
 </head>
 
 <body class="antialiased">
@@ -586,7 +604,7 @@
     <div id="loader-wrapper">
         <div class="w-full h-full flex justify-center items-center">
             <!-- Full Screen Loading Video (Desktop) -->
-            <video autoplay muted playsinline disablepictureinpicture
+            <video autoplay muted preload="auto" playsinline disablepictureinpicture
                 class="hidden md:block w-full h-full object-cover pointer-events-none">
                 <source
                     src="Firefly can you generate a lloading animation for my tech website our company name is KLN BUSINESS S.mp4"
@@ -594,7 +612,7 @@
             </video>
 
             <!-- Full Screen Loading Video (Mobile) -->
-            <video autoplay muted playsinline disablepictureinpicture
+            <video autoplay muted preload="auto" playsinline disablepictureinpicture
                 class="block md:hidden w-full h-full object-cover pointer-events-none">
                 <source src="mobile view loading animation.mp4" type="video/mp4">
             </video>
@@ -1383,7 +1401,18 @@
                                 font-size: 0.6rem;
                             }
                         }
-                    </style>
+                    
+        /* Critical Mobile Responsiveness & Overflow Fixes */
+        html, body {
+            overflow-x: hidden !important;
+            width: 100vw !important;
+            max-width: 100% !important;
+            position: relative;
+        }
+        * {
+            box-sizing: border-box;
+        }
+</style>
 
                     <!-- Image Accordion Grid -->
                     <div class="accordion-container animate-fade-in-up" style="animation-delay: 0.6s;">
@@ -2019,7 +2048,7 @@
                         mainContent.classList.add('opacity-100');
                         loaderWrapper.style.display = 'none';
                     }, { once: true });
-                }, 7000);
+                }, 1500);
             }
         });
 
